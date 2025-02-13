@@ -1,0 +1,80 @@
+/* Globaler Reset */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Canvas als Hintergrund – hinter allen anderen Elementen */
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* Controls werden über dem Canvas angezeigt */
+.controls {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 50;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="range"] {
+    width: 100%;
+}
+
+/* Zentrierter Text "Für dich Alex" mit Pulse-Effekt */
+.word {
+    position: fixed;
+    /* Fixiert relativ zum Viewport */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    text-align: center;
+    font-size: 3rem;
+    /* Basis-Schriftgröße */
+    font-family: Arial, sans-serif;
+    color: #000;
+    z-index: 100;
+    /* Immer im Vordergrund */
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* Keyframes für den Pulse-Effekt */
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+/* Responsive Anpassung für Handybildschirme */
+@media (max-width: 480px) {
+    .word {
+        font-size: 2rem;
+        /* Etwas kleinere Schrift auf kleinen Bildschirmen */
+        padding: 0 10px;
+        /* Optionaler horizontaler Abstand */
+    }
+}
