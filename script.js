@@ -5,7 +5,7 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 let emojis = [];
-let intensity = 500;
+let intensity = 100;
 let speedFactor = 5;
 const emoji = '🖕🏼'; // Rain Drops
 
