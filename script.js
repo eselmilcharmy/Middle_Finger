@@ -6,7 +6,7 @@ canvas.height = window.innerHeight;
 
 let emojis = [];
 let intensity = 100;
-let speedFactor = 5;
+let speedFactor = 1;
 const emoji = '🖕🏼'; // Rain Drops
 
 class Emoji {
